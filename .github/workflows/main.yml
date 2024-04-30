@@ -25,4 +25,3 @@ jobs:
           VALIDATE_JSCPD: false # for copy and paste detection
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CKV2_GHA_1: false
