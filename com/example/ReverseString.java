@@ -31,8 +31,8 @@ public final class ReverseString {
       File file = new File("input.txt");
       Scanner sc = new Scanner(file);
       // Setup writer for output file.
-      FileWriter Writer = new FileWriter("output.txt");
-      BufferedWriter bufferedWriter = new BufferedWriter(Writer);
+      FileWriter writer = new FileWriter("output.txt");
+      BufferedWriter bufferedWriter = new BufferedWriter(writer);
 
       while (sc.hasNextLine()) {
         // Read the line from file.
@@ -46,13 +46,19 @@ public final class ReverseString {
 
       // Close all writers and scanner.
       bufferedWriter.close();
-      Writer.close();
+      writer.close();
       sc.close();
     } catch (IOException e) {
       e.printStackTrace();
     }
   }
 
+  /**
+   * Reverses a string recursively.
+   *
+   * @param string
+   * @return A reverse of the input string.
+   */
   public static String reverseString(final String string) {
     // If the string is only one character, return that character.
     if (string.length() <= 1) {
